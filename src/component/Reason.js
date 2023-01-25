@@ -6,7 +6,7 @@ import Answer from "./Answer";
 function Reason(props) {
   const [inputVal, handleChange, handleSubmit] = useInput('', addReason);
   const [reasons, setReasons] = useState([{
-    id: '1',
+    id: '0',
     value: props.issue,
   }]);
 
@@ -21,8 +21,6 @@ function Reason(props) {
     <div>
       <div>
         <h2 className="mt-4 text-lg">II. 문제분석</h2>
-        <p className="pl-2 text-sm">문제점 : " <span className="bg-white">{props.issue}</span> "</p>
-        
         <div>
           {reasons.map((item) => {
             return <Answer id={item.id} item={item.value}/>;
