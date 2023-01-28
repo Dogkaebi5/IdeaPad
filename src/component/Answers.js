@@ -1,9 +1,10 @@
-function Answer(props) {
+function Answers(props) {
   return (
     <div className="text-sm">
       {props.id > 0 && 
         <div>
           <p className="w-full bg-blue-300 text-white">❗ {props.item}</p>
+          <hr/>
           {props.show && <p className="mt-2">❔ 왜 " <span className="pl-2 pr-2 bg-white">{props.item}</span> " ?</p>}
         </div>
       }
@@ -12,4 +13,4 @@ function Answer(props) {
   );
 }
 
-export default Answer;
+export default Answers;
