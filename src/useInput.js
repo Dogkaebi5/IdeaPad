@@ -2,17 +2,10 @@ import { useState } from "react";
 
 export function useInput(initialVal, submitAct) {
     const [inputVal, setInputVal] = useState(initialVal);
-    const [bool, setBool] = useState(false);
 
     const handleChange = (e) => { setInputVal(e.target.value);};
 
-    const handleSubmit = () => {
-        submitAct(inputVal);
-    }
-
-    const handleBool = () => {
-        setBool(!bool)
-    }
+    const handleSubmit = () => {submitAct(inputVal);}
 
     const handleKeyPress = (e) => {
         if(e.key === 'Enter') {
@@ -20,5 +13,5 @@ export function useInput(initialVal, submitAct) {
         }
     }
 
-    return [inputVal, bool, handleChange, handleSubmit, handleKeyPress, handleBool];
+    return [inputVal, handleChange, handleSubmit, handleKeyPress];
 }
