@@ -15,6 +15,7 @@ function App() {
   const issueSubmit = (inputVal) => {
     setIssue(inputVal);
     setIsShowSolution(false);
+    setIsShowService(false);
     setIsSubmitIssue(!isSubmitIssue);
   }
   const [inputVal, handleIssueChange, handleIssueSubmit, handleEnter] = useInput('', issueSubmit);
